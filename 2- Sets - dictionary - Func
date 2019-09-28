@@ -401,6 +401,13 @@ def cm(feet=0, inches=0):
     return inches_to_cm + feet_to_cm
 print(cm(5,8))
 
+# to get inverse 
+
+def FtoC(F):
+    F = C * 9/5 + 32
+    return F
+print(FtoC(78))
+
 
 
 
