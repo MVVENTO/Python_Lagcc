@@ -227,3 +227,52 @@ print(dict1)
 # gives error because we deleted the dictionary
 
 
+#dictionary constructor:
+dict1 = dict(brand = "ford", model = "taurus", year = 2109)
+print(dict1)
+
+# clear function:
+dict1.clear()
+print(dict1)
+
+
+# Build dictionary increamentally:
+# create empty dictionary
+person = {}
+print(person)
+print(type(person))
+
+person["fname"] = "Joe"
+person["lname"] = "smith"
+person["age"] = 51
+person ["spouse"] = "marry"
+person["children"] = ["Ralph","Betty", "Joelle"]
+person["pets"] = {"dog":"fido", "cat":"fox"}
+print(person)
+
+print(person["children"][2])
+print(person["children"][-1])
+# both 2 and -1 print Joelle
+
+
+print(person["pets"]["cat"])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
