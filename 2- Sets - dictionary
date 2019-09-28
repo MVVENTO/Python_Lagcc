@@ -257,6 +257,13 @@ print(person["children"][-1])
 
 print(person["pets"]["cat"])
 
+# Build basic calculator:
+# create two variables
+
+num1 = input("Enter a number:")
+num2 = input("Enter another number: ")
+result = int(num1) + int(num2) 
+print(result)
 
 
 
