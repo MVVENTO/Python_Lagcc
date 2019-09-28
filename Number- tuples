@@ -1,0 +1,160 @@
+# Tuple: is collection which is ordered and unchangeable.
+# is written with round brackets ; ( )
+
+
+# Example:
+tuplel = ('apple', 'banana', 'cherry')
+print(tuplel)
+
+# Numbers:
+print(2+2)
+print(50-5*6)
+print(8 /5)
+print(10/2) # division always returns floating point number
+print(17 //3) #floor division ignore the remainder
+print(17 % 3) # the % operator returns the remainder
+print(5 **2) # the exponent
+
+print(5 == 5)
+print(5 != 5)
+# variables:
+num_1 = 12
+num_2 = 18
+print(num_1 + num_2)
+
+
+price = 100.50
+tax_rate = 12.5 / 100
+tax_paid = price * tax_rate
+amount_paid = price + tax_paid
+print(tax_paid)
+print(amount_paid)
+print(round(amount_paid, 2))
+
+#Strings:
+str1 = 'Hello'
+str2 = 'MAC108'
+print(str1 + ' ' + str2 )
+print('Hello ' + str2)
+print(str1  + str2)
+print('5' + ' 5')
+
+print('doesn\'t')
+print("doesn't")
+
+print('py' 'thon')
+print(3 * 'Hello ' + 'Mac108')
+text = 'Hello MAC108 '
+print(text * 3)
+
+
+# indexing: always we start with index 0
+word = 'python '
+print(word[0])
+print(word[5])
+print(word[2])
+print(word[3])
+
+print(word[-1])
+print(word[-2])
+print(word[6])
+print(word[-6])
+
+# slicing:
+print(word[0:2])
+print(word[2:5])
+print(word[:6])
+print(word[:4])
+print(word[4:])
+print(word[-2:])
+
+# lists:
+list1 = [1,2,3,4,5]
+print(list1[2])
+print(list1[-1]) #to print 5
+print(list1[4]) #other way to print 5
+print(list1[:]) #whole list
+
+list2 = [12,14,16]
+print(list1 + list2) # concatinates them
+
+
+list1[2] = 33 # using index to replace
+print(list1)
+list1.append(20)
+print(list1) # using 3 built in functions ; append, print and rounding
+list1[2:4] = [] # removes 33 and 4
+print(list1)
+
+list3 = [2, 'a',4,[1,2]]
+print(list3[3])
+print(list3[3][0]) #nested list ; list inside another list
+list3.extend([5, 7, 8])
+print(list3)
+
+list3.remove([1,2])
+print(list3)
+
+del(list3[2])
+print(list3)
+
+list3.pop() # pop function removes the last item
+print(list3)
+# convert list to string and back:
+
+s = 'l<3ct' #i created a variable called s and assigned this string to s
+list(s)
+print(s)
+print(list(s)) #list construction ; makes a list from string
+
+print(s.split()) #brings it back to a string
+
+list4 = ['a','b','c']
+print('-'.join(list4))
+print(' '.join(list4))
+print('/'.join(list4))
+
+list5 = [9,6,0,3]
+print(sorted(list5)) #sorted function makes it in order
+reversed(list5)
+print(list5)
+
+x = [list4, list5] # addes both lists together ; nested
+print(x)
+
+print(x[1][0])
+
+# the range function:
+#range (0,10)
+# range (10)
+
+for number in range(0,10): # print vertical
+    print(number)
+
+
+for number in range(0,10): # print horizontal
+    print(number, end= '-')
+
+
+for number in range(10):
+    print(number)
+
+
+for number in range(0,10, 2): # index 2 is called steps ; skips 2
+    print(number,end= ' ')
+
+list6 = [1,4,7,3,9,12]
+for item in list6:
+    print(item, end= ' ')
+
+for item in [1,4,7,3,9,12]:
+    print(item, end= ' ')
+
+for number in range(20): # for numbers ; if number is remainder of 3 ;
+print these numbers
+    if number % 3 == 0:
+        print(number)
+
+fruit = ['banana', 'apple', 'grape']
+for index, value in enumerate(fruit, 1):
+    print (index, value)
