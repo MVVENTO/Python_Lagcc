@@ -257,6 +257,8 @@ print(person["children"][-1])
 
 print(person["pets"]["cat"])
 
+
+
 # Build basic calculator:
 # create two variables
 
@@ -265,7 +267,139 @@ num2 = input("Enter another number: ")
 result = int(num1) + int(num2) 
 print(result)
 
+num1 = input("Enter a number:")
+num2 = input("Enter another number: ")
+result = float(num1) + float(num2) 
+print(result)
 
+num1 = float(input("Enter a number:"))
+num2 = float(input("Enter another number: "))
+result = num1 + num2 
+print(result)
+
+num1 = float(input("Enter a number:"))
+num2 = float(input("Enter another number: "))
+result = num1 ** num2 
+print(result)
+
+# Enter a number:12
+# Enter another number: 100
+# 8.281797452201455e+107 < scientific notation, e+ means to the power ot 107
+
+
+
+
+# modules or libraries
+# datetime module
+
+import datetime
+import math
+math.pi
+print(math.pi)
+
+print(dir(datetime))
+print(help(datetime.date))
+
+
+# modules or libraries
+# datetime module
+
+import datetime
+import math
+
+
+
+# print(dir(datetime))
+# print(help(datetime.date))
+
+# the creator of python
+
+gvr = datetime.date(1956,1,31)
+print(gvr)
+print(gvr.year)
+print(gvr.month)
+print(gvr.day)
+
+# adding days to date:
+exam = datetime.date(2019,9,28)
+dt = datetime.timedelta(40)
+print(exam + dt)
+
+# default format: yyyy-mm-dd
+# we can change this format to:
+# day-name, month-name, year-name, day-#, year
+
+print(gvr.strftime("%A, %B, %d, %Y"))
+
+
+# print my birthday and figure out what day I was born
+gvr = datetime.date(1989,5,19)
+print(gvr.strftime("%A, %B, %d, %Y"))
+
+import datetime
+import math
+
+# accessing time:
+now = datetime.datetime.today()
+
+print(now)
+
+
+# radius of the Earth < Function
+
+
+
+# defining function: def
+# Example:
+import math
+
+def MAC108():
+    print("Hello Class")
+MAC108()
+
+
+def add(x, y):
+    return x + y
+print(add(7, 5))
+
+# return the volume of sphere:
+# v = 4/3 * pi * r^3 only value here is r 
+
+def volS(r):
+    v = (4.0/3.0) * math.pi * r**3
+    return v
+print(volS(6378.1))
+
+# radius of the Sun
+
+import math
+
+# return the volume of sphere:
+# v = 4/3 * pi * r^3 only value here is r 
+
+def volS(r):
+    v = (4.0/3.0) * math.pi * r**3
+    return v
+print(volS(695510))
+
+
+# return area of triangle:
+# A= 1/2 b.h
+
+def Areat(b, h) :
+    return 0.5 * b * h
+print(Areat(5,12))
+
+# convert metric system to american system
+# 1 inch = cm
+# 1 foot = 12 inches = 30.48 cm
+
+def cm(feet=0, inches=0):
+
+    inches_to_cm = inches * 2.54
+    feet_to_cm = feet * 12 * 2.54
+    return inches_to_cm + feet_to_cm
+print(cm(5,8))
 
 
 
