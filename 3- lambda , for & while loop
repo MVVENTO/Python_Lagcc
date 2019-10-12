@@ -164,6 +164,22 @@ for x in range(1,71):
                         print(x,y,z,t,a,b)
 
 
+#The break stateent:
+#we can stop the loop
+fruits = ["apple","banana","cherry"]
+for x in fruits:
+    print(x)
+    if x =="banana":
+        break
+
+#where you put break will change the code
+
+fruits = ["apple","banana","cherry"]
+for x in fruits:
+    if x =="":
+        break
+    print(x)
+
 
 
 
