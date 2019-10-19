@@ -1,0 +1,84 @@
+#conditionals
+#if statement
+#one condition
+
+language = "python"
+if language =="python":
+    print("language is python")
+    
+    # two conditions:
+
+language = "python"
+if language =="python":
+    print("language is python")
+else:
+    print("Language is Not python")
+    
+    
+# two conditions:
+
+language = "python"
+if language =="pythom":
+    print("language is python")
+else:
+    print("Language is Not python")
+    
+        
+#three conditions:
+    
+language = "Java"
+if language =="python":
+    print("language is python")
+elif language == "Java":
+    print("Language is Java")
+else:
+    print("language is not the language we want")
+    
+    language = "python"
+if language =="python":
+    print("language is python")
+elif language == "Java":
+    print("Language is Java")
+else:
+    print("language is not the language we want")
+    
+        
+language = "python"
+if language =="pythonm":
+    print("language is python")
+elif language == "Java":
+    print("Language is Java")
+else:
+    print("language is not the language we want")
+    
+user = "Adminnnnn"
+logged_in = True
+if user == "Admin" and logged_in:
+    print("Admin page")
+else:
+    print("user and logged_in incorrect")
+    
+user = "Admin"
+logged_in = True
+if user == "Admin" and logged_in:
+    print("Admin page")
+else:
+    print("user and logged_in incorrect")
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
