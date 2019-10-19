@@ -66,28 +66,61 @@ else:
     print("user and logged_in incorrect")
     
     
- a = int(input("The length of side a = ")) 
+    
+a = int(input("The length of side a = ")) 
 b = int(input("The length of side b = ")) 
 c = int(input("The length of side c = ")) 
 
 if a != b and b!= c and c!=a:
     print("This is scalene triangle")
-    elif: a  == b and b == c:
+elif a  == b and b == c:
             print("This is equalitel triangle")
-        else:
+else:
             print("This is isoceles triangles")
     
     
     
+        
+a = int(input("The length of side a = ")) 
+b = int(input("The length of side b = ")) 
+c = int(input("The length of side c = ")) 
+
+if a != b and b!= c and c!=a:
+    print("This is scalene triangle")
+elif a  == b and b == c:
+            print("This is equalitel triangle")
+else:
+            print("This is isoceles triangles")
+    
+    
+    def calcWeekWages(totalHours,hourlyWage):
+    
+    '''Return total weekly wages for a worker working
+    with a given regular hourly wage. include overtime for hours over 40'''
+
+    ''' if totalHours is less or = to 40'''
+
+    if totalHours <= 40:
+        totalWages = totalHours * hourlyWage   
+    else:
+        overtime = totalHours - 40
+        totalWages = hourlyWage*40+(1.5*hourlyWage)*overtime
+    return totalWages
+def main():
+    hours = float(input("enter hours worked"))
+    wage = float(input("enter dollars paid per hour: "))
+    total = calcWeekWages(hours , wage)
+    print("wage for(hours) at $(wage:.2f) per hour rate $(total:.2f).".format(**locals()))
+
+main()
+
     
     
     
     
     
     
-    
-    
-    
+
     
     
     
