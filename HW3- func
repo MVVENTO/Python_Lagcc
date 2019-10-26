@@ -1,0 +1,72 @@
+    
+#calculate the taxes:
+#input income tax
+#income tax brakets:
+Tax rate	Single	
+10%	Up to $9,700	
+12%	$9,701 to $39,475	
+22%	$39,476 to $84,200	
+24%	$84,201 to $160,725	
+32%	$160,726 to $204,100	
+35%	$204,101 to $510,300	
+37%	$510,301 or more
+
+
+    
+#jack
+jack = {"name": "jack",
+        "assignment":[80,50,40,90],
+        "test": [88.99],
+        "lab": [78,88]
+        }
+james = {"name": "james",
+        "assignment":[80,55,45,21],
+        "test": [75.75],
+        "lab": [78,77]
+        }
+jessica = {"name": "jessica",
+        "assignment":[70,80,94,90],
+        "test": [75.82],
+        "lab": [88,99]
+        }
+
+
+
+#calculate latter grade of each student:
+def letter_grade(score):
+    if score >= 90: return "A"
+    elif score >= 80: return "B"
+    elif score >= 70: return "C"
+    elif score >= 60: return "D"
+    else: return "F"
+
+# calculate total average of the whole class:
+def class_average(student_list):
+    result_list = []
+
+    for student in student_list:
+    
+        stud_avg = calculate_total_average(student)
+        result_list.append(stud_avg)
+        return get_average(result_list)
+
+students = [jack, james, jessica]
+#iterate through the studets list
+# and calculate their respective average marks
+# and letter grade
+
+for i in students:
+    print(i["name"])
+    print("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=")
+    print("Average Grade of %s is : %s " %(i["name"],
+                                            calculate_total_average(i)))
+    print("Letter Grade of %s is : %s" %(i["name"],
+          letter_grade(calculate_total_average(i))))
+    print()
+
+    #calculate th average of whole class:
+class_av =class_average(students)
+
+print("Class Average is %s" %(class_av))
+print("Letter_Grade of the class is %s "
+      %(letter_grade(class_av)))
