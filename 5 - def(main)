@@ -17,14 +17,11 @@ else:
     
     
     
-    
-    
-
 #jack
 jack = {"name": "jack",
-        "assignment":[80,50,40,20],
-        "test": [75.75],
-        "lab": [78,77]
+        "assignment":[80,50,40,90],
+        "test": [88.99],
+        "lab": [78,88]
         }
 james = {"name": "james",
         "assignment":[80,55,45,21],
@@ -32,9 +29,9 @@ james = {"name": "james",
         "lab": [78,77]
         }
 jessica = {"name": "jessica",
-        "assignment":[70,80,94,23],
+        "assignment":[70,80,94,90],
         "test": [75.82],
-        "lab": [78,99]
+        "lab": [88,99]
         }
 
 # function calculates average:
@@ -58,9 +55,9 @@ def calculate_total_average(students):
 #calculate latter grade of each student:
 def letter_grade(score):
     if score >= 90: return "A"
-    elif score >= 90: return "B"
-    elif score >= 80: return "C"
-    elif score >= 70: return "D"
+    elif score >= 80: return "B"
+    elif score >= 70: return "C"
+    elif score >= 60: return "D"
     else: return "F"
 
 # calculate total average of the whole class:
@@ -93,6 +90,9 @@ class_av =class_average(students)
 print("Class Average is %s" %(class_av))
 print("Letter_Grade of the class is %s "
       %(letter_grade(class_av)))
+
+
+    
 
 
     
