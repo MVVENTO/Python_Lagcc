@@ -8,4 +8,91 @@ elif score >= 60:
     print('D')
 else:
     print('F')
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
+#jack
+jack = {"name": "jack",
+        "assignment":[80,50,40,20],
+        "test": [75.75],
+        "lab": [78,77]
+        }
+james = {"name": "james",
+        "assignment":[80,55,45,21],
+        "test": [75.75],
+        "lab": [78,77]
+        }
+jessica = {"name": "jessica",
+        "assignment":[70,80,94,23],
+        "test": [75.82],
+        "lab": [78,99]
+        }
+
+# function calculates average:
+def get_average(marks):
+    total_sum = sum(marks)
+    total_sum = float(total_sum)
+    return total_sum / len(marks)
+
+#function calculates total average:
+def calculate_total_average(students):
+    assignment = get_average(students["assignment"])
+    test = get_average(students["test"])
+    lab = get_average(students["lab"])
+
+# return result based on weightage supplied
+#10 % from assignment
+#70 % from test
+#20 % from lab
+    return (0.1*assignment + 0.7*test + 0.2*lab)
+
+#calculate latter grade of each student:
+def letter_grade(score):
+    if score >= 90: return "A"
+    elif score >= 90: return "B"
+    elif score >= 80: return "C"
+    elif score >= 70: return "D"
+    else: return "F"
+
+# calculate total average of the whole class:
+def class_average(student_list):
+    result_list = []
+
+    for student in student_list:
+    
+        stud_avg = calculate_total_average(student)
+        result_list.append(stud_avg)
+        return get_average(result_list)
+
+students = [jack, james, jessica]
+#iterate through the studets list
+# and calculate their respective average marks
+# and letter grade
+
+for i in students:
+    print(i["name"])
+    print("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=")
+    print("Average Grade of %s is : %s " %(i["name"],
+                                            calculate_total_average(i)))
+    print("Letter Grade of %s is : %s" %(i["name"],
+          letter_grade(calculate_total_average(i))))
+    print()
+
+    #calculate th average of whole class:
+class_av =class_average(students)
+
+print("Class Average is %s" %(class_av))
+print("Letter_Grade of the class is %s "
+      %(letter_grade(class_av)))
+
+
+    
