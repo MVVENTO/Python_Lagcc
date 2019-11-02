@@ -70,3 +70,96 @@ class_av =class_average(students)
 print("Class Average is %s" %(class_av))
 print("Letter_Grade of the class is %s "
       %(letter_grade(class_av)))
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      #calculate tax rate of each student:
+def tax_average(score):
+    if score >= 9700: return "10%"
+    elif score >= 39475: return "12%"
+    elif score >= 84200: return "22%"
+    elif score >= 160725: return "24%"
+    elif score >= 204100: return "32%"
+    elif score >= 510300: return "35%"
+    else: return "37%"
+#jack
+jack = {"name": "jack",
+        "single income":[849785],
+        }
+james = {"name": "james",
+        "single income":[160777],
+        }
+jessica = {"name": "jessica",
+        "single income":[604470],
+        }
+
+
+
+#calculate tax rate of each student:
+def tax_average(score):
+    if score >= 9700: return "10%"
+    elif score >= 39475: return "12%"
+    elif score >= 84200: return "22%"
+    elif score >= 160725: return "24%"
+    elif score >= 204100: return "32%"
+    elif score >= 510300: return "35%"
+    else: return "37%"
+
+# calculate total average of the whole class:
+def class_average(student_list):
+    result_list = []
+
+    for student in student_list:
+    
+        stud_avg = calculate_total_average(student)
+        result_list.append(stud_avg)
+        return get_average(result_list)
+
+students = [jack, james, jessica]
+#iterate through the studets list
+# and calculate their respective average marks
+# and letter grade
+
+for i in students:
+    print(i["name"])
+    print("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=")
+    print("Average Grade of %s is : %s " %(i["name"],
+        calculate_total_average(i)))
+    print("Letter Grade of %s is : %s" %(i["name"],
+        letter_grade(calculate_total_average(i))))
+    print()
+
+    #calculate th average of whole class:
+class_av =class_average(students)
+
+print("Class Average is %s" %(class_av))
+print("Letter_Grade of the class is %s "
+      %(letter_grade(class_av)))
+      
+
+
+
+
+
+
