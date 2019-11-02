@@ -1,0 +1,112 @@
+# Graphical User Interface: GUI
+#import tinkter
+from tkinter import *
+window = Tk()
+window.title("Welcome to MAC 108")
+window.mainloop()
+
+
+# create a label widget
+from tkinter import *
+window = Tk()
+window.title("Welcome to MAC 108")
+lbl = Label(window, text="Hello", font=("Arial Bold", 50))
+lbl.grid(column=0, row=0)
+window.mainloop()
+
+
+#when button is clicked hello changes
+from tkinter import *
+window = Tk()
+window.title("Welcome to MAC 108")
+window.geometry('350x300')
+lbl = Label(window, text="Hello")
+lbl.grid(column=0, row=0)
+
+def clicked():
+    lbl.configure(text="Button was clicked")
+btn = Button(window, text="Click Me",command=clicked, 
+             bg="orange", fg="blue")
+btn.grid(column =1, row= 0)
+
+
+window.mainloop()
+
+
+
+#when button is clicked it changes 
+from tkinter import *
+window = Tk()
+window.title("Welcome to MAC 108")
+window.geometry('350x300')
+lbl = Label(window, text="Hello")
+lbl.grid(column=0, row=0)
+
+def clicked():
+    btn.configure(text="Button was clicked")
+btn = Button(window, text="Click Me",command=clicked, 
+             bg="orange", fg="blue")
+btn.grid(column =1, row= 0)
+
+window.mainloop()
+
+
+
+
+
+#create a label widget
+#add a button widget:
+#input using entry :text box
+
+from tkinter import *
+window = Tk()
+window.title("Welcome to MAC 108")
+window.geometry('350x300')
+lbl = Label(window, text="Hello")
+lbl.grid(column=0, row=0)
+txt = Entry(window, width=10)
+txt.grid(column=1, row=0)
+def clicked():
+    res = "Welcome to " + txt.get()
+    lbl.configure(text = res)
+btn = Button(window, text="Click Me",command=clicked, 
+             bg="orange", fg="blue")
+btn.grid(column = 2, row= 0)
+
+
+window.mainloop()
+
+#create a label widget
+#add a button widget:
+#input using entry :text box
+#disabled txt
+
+from tkinter import *
+window = Tk()
+window.title("Welcome to MAC 108")
+window.geometry('350x300')
+lbl = Label(window, text="Hello")
+lbl.grid(column=0, row=0)
+txt = Entry(window, width=10, state ='disabled')
+txt.grid(column=1, row=0)
+def clicked():
+    res = "Welcome to " + txt.get()
+    lbl.configure(text = res)
+btn = Button(window, text="Click Me",command=clicked, 
+             bg="orange", fg="blue")
+btn.grid(column = 2, row= 0)
+window.mainloop()
+
+
+#add combobox widget
+
+from tkinter import *
+from tkinter.ttk import *
+window = Tk()
+window.title("Welcome to MAC 108")
+window.geometry('350x300')
+combo = Combobox(window)
+combo['values']=(1,2,3,4,5, "Text")
+combo.grid(column=3, row=0)
+window.mainloop()
+
