@@ -35,3 +35,112 @@ class Person:
               
 p2 = Person("jessica",25)
 p2.myfunc()
+
+
+
+
+#python inheritance:
+#parent class: base class
+#child class: inherites from the parent class
+#child class: derivd class
+
+
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname= fname
+        self.lastname = lname
+
+
+    def printname (self):
+        print(self.firstname,self.lastname)
+
+x= Person("smith" , "John")
+x.printname()
+
+#create child class:
+
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname= fname
+        self.lastname = lname
+
+
+    def printname (self):
+        print(self.firstname,self.lastname)
+
+class Student(Person):
+    def __init__(self,fname, lname):
+        Person.__init__(self, fname, lname)
+        
+x = Student("Mo" , "dell")
+x.printname()
+
+#super function:
+
+
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname= fname
+        self.lastname = lname
+
+
+    def printname (self):
+        print(self.firstname,self.lastname)
+
+class Student(Person):
+    def __init__(self,fname, lname):
+        super().__init__(fname, lname) # only can read 3 arguemnts 
+        
+x = Student("Marry" , "olson")
+x.printname()
+
+
+
+#add properties:
+
+
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname= fname
+        self.lastname = lname
+
+
+    def printname (self):
+        print(self.firstname,self.lastname, self.graduationyear)
+
+class Student(Person):
+    def __init__(self,fname, lname, year):
+        super().__init__(fname, lname) # only can read 3 arguemnts
+        self.graduationyear = year
+        
+x = Student("Carl" , "lewis", 2019)
+x.printname()
+
+
+
+#add method
+
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname= fname
+        self.lastname = lname
+
+
+    def printname (self):
+        print(self.firstname,self.lastname, self.graduationyear)
+
+class Student(Person):
+    def __init__(self,fname, lname, year):
+        super().__init__(fname, lname) # only can read 3 arguemnts
+        self.graduationyear = year
+
+    def welcome(self):
+        print("Welcome", self.firstname, self.lastname,
+              "to the class of", self.graduationyear)
+        
+x = Student("Carl" , "lewis", 2019)
+x.welcome()
+
+
+
+
