@@ -110,3 +110,24 @@ combo['values']=(1,2,3,4,5, "Text")
 combo.grid(column=3, row=0)
 window.mainloop()
 
+
+
+
+#add combobox widget
+#add a checkbutton widget:
+# add radio buttons widget:
+
+from tkinter import *
+from tkinter.ttk import *
+window = Tk()
+window.title("Welcome to MAC 108")
+window.geometry('350x300')
+
+chk = BooleanVar()
+chk.set(True)
+chk = Checkbutton(window, text='choose', var=chk)
+chk.grid(column=0, row=0)
+
+
+
+window.mainloop()
