@@ -1,0 +1,14 @@
+# write a program using python class to solve
+# quadratic equation
+import math
+
+class Shape:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+
+    def quadratic(self):
+        return self.b **2 - 4*self.a * self.c 
+
+quadratic_eq = Shape(100,45,55)
