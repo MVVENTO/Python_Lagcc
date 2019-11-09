@@ -1,0 +1,25 @@
+class Customer(object):
+    """ A customer of ABC Bank with a checking account.
+    Customers have the following properties:
+
+    Attributes:
+    name: A string representing te customers ame balance: A float tracking the current balance of the customers account.
+    """
+
+    def __init__(self, name, balance=0.0):
+        """Return a customer object whose name is name
+        and starting balance is balance. """
+        self.name = name
+        self.balance = balance
+
+    def withdraw(self, amount):
+        """ Return the balance remaining afer withdrawing amount dollars."""
+        if amount > self.balance:
+            raise RuntimeError('Amount Greater than avaliable balance.')
+        self.balance -= amount
+        return self.balance
+
+
+cust1 = Customer('smith', 1000)
+print(cust1.withdraw(10))
+
