@@ -3,7 +3,7 @@ class Customer(object):
     Customers have the following properties:
 
     Attributes:
-    name: A string representing te customers ame balance: A float tracking the current balance of the customers account.
+    name: A string representing the customers ame balance: A float tracking the current balance of the customers account.
     """
 
     def __init__(self, name, balance=0.0):
@@ -19,7 +19,13 @@ class Customer(object):
         self.balance -= amount
         return self.balance
 
+    def deposit(self, amount):
+        self.balance += amount
+        return self.balance
+
 
 cust1 = Customer('smith', 1000)
 print(cust1.withdraw(10))
-
+print(Customer.withdraw(cust1,20))
+print(cust1.deposit(500))
+    
