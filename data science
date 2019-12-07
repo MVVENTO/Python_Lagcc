@@ -1,0 +1,13 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import pyplot
+
+movies = ['Annie Hall', 'Ben-Hur', 'Casablanca', 'Ghandi', 'West side story']
+num_oscars = [5,11,3,8,10]
+
+plt.plot(movies, num_oscars)
+plt.show()
+
+plt.bar(movies, num_oscars)
+plt.show()
