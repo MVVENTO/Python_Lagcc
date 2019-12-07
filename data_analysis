@@ -11,3 +11,7 @@ dt.index
 dt['tx_price']
 dt['tx_price'][0:3]
 dt[0:3]
+dt['tx_price'].mean()
+dt['tx_price'].max()
+dt['tx_price'].min()
+dt['tx_price']<250000
