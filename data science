@@ -11,3 +11,93 @@ plt.show()
 
 plt.bar(movies, num_oscars)
 plt.show()
+
+plt.plot(movies, num_oscars)
+plt.show()
+plt.bar(movies, num_oscars)
+plt.show()
+plt.barh(movies, num_oscars)
+plt.show()
+plt.bar(movies, num_oscars)
+plt.ylabel('Number of Oscars')
+plt.xlabel('Movie Name')
+plt.title('My Favorite Movies')
+plt.show()
+barlist=plt.bar(['Annie Hall', 'Ben-Hur', 'Casablanca', 'Ghandi', 'West side story'],[5,11,3,8,10])
+
+barlist[1].set_color('r')
+plt.show()
+y_pos=np.arange(len(movies))
+plt.bar(y_pos, num_oscars, color=['black','red','blue','green','yellow'])
+
+plt.xticks(y_pos,movies)
+plt.show()
+plt.bar(y_pos, num_oscars, color=['yellow'],edgecolor='blue')
+
+plt.xticks(y_pos,movies)
+plt.show()
+plt.pie(num_oscars)
+plt.show()
+
+plt.pie(num_oscars, labels=movies)
+plt.show()
+colors=['orange', 'green','yellow','red','magenta']
+plt.pie(num_oscars, labels=movies, colors=colors, autopct='%1.1f%%')
+plt.show()
+
+colors=['blue', 'green','yellow','red','magenta']
+plt.pie(num_oscars, labels=movies, colors=colors,)
+plt.show()
+
+colors=['orange', 'green','yellow','red','magenta']
+explode=[0.1,0,0,0,0]
+plt.pie(num_oscars, labels=movies, colors=colors, autopct='%1.1f%%', explode=explode)
+plt.show()
+
+colors=['orange', 'green','yellow','red','magenta']
+explode=[0.5,0,0,0,0]
+plt.pie(num_oscars, labels=movies, colors=colors, autopct='%1.1f%%', explode=explode,)
+plt.show()
+
+colors=['orange', 'green','yellow','red','magenta']
+explode=[0.5,0,0,0,0]
+plt.pie(num_oscars, labels=movies, colors=colors, autopct='%1.1f%%', explode=explode, startangle=90)
+plt.show()
+
+colors=['orange', 'green','yellow','red','magenta']
+explode=[0.1,0,0,0,0]
+plt.pie(num_oscars, labels=movies, colors=colors, autopct='%1.1f%%', explode=explode, startangle=90)
+plt.title("Number of Oscars By The Five Most Famous Movies", bbox={"color":"0.9","pad":5})
+plt.show()
+x = range(1,10)
+y = [i*i for i in x]
+plt.plot(x,y)
+plt.show()
+
+plt.rc('lines', linewidth=3)
+plt.plot(x,y)
+ply.show()
+
+plt.subplot(1,2,1) # (row, colums, indexes)
+plt.plot(x,y,'r--')
+plt.subplot(1,2,2)
+plt.plot(y,x,'b:')
+plt.show()
+
+from matplotlib import rcParams
+plt.subplot(1,2,1) # (row, colums, indexes)
+rcParams['figure.figsize']=10,5
+plt.plot(x,y,'r--')
+plt.subplot(1,2,2)
+plt.plot(y,x,'b:')
+plt.show()
+
+from matplotlib import rcParams
+plt.subplot(2,1,1) # (row, colums, indexes)
+rcParams['figure.figsize']=10,5
+plt.plot(x,y,'r--')
+plt.subplot(2,1,2)
+plt.plot(y,x,'b:')
+plt.show()
+
+
