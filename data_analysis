@@ -1,0 +1,8 @@
+import pandas as pd
+dt = pd.read_csv('realestate.csv')
+dt.head(2)
+dt.tail()
+dt.shape # number of columns and of rows
+len(dt) 
+dt.columns
+dt.index
